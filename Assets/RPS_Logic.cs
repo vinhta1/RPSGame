@@ -40,19 +40,20 @@ public class RPS_Logic : MonoBehaviour
             }
             else if(GameManager.Instance.winner == 2)
             {
-                Debug.Log("Player 1 wins");
+                Debug.Log("Player 2 wins");
             }
             GameManager.Instance.winCheck = false;
             GameManager.Instance.winner = 0;
         }
     }
-    int wining(int player1, int player2)
+    static public int wining(int player1, int player2)
     {
-        if(player1 == 0)
+        // 0 = nothing, 1 = rock, 2 = paper, 3 = scissors
+        if(player1 == 0 && player2 != 0) 
         {
             return 2;
         }
-        else if (player2 == 0)
+        else if (player2 == 0 && player1 != 0)
         {
             return 1;
         }

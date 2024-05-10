@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimerLogic : MonoBehaviour
 {
-    public int timer = 20;
+    public int timer = 3;
     //bool challenger = false;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class TimerLogic : MonoBehaviour
         if (GameManager.Instance.challengeCheck == true)
         {
             //timer = 20;
-            TakeoutCoroutine(1);
+            StartCoroutine(TakeoutCoroutine(1));
         }
         //if()
 
@@ -27,11 +27,12 @@ public class TimerLogic : MonoBehaviour
     IEnumerator TakeoutCoroutine(float time)
     {
         GameManager.Instance.challengeCheck = false;
-        for (timer = 20; timer > 0; timer--)
+        for (timer = 3; timer > 0; timer--)
         {
+            Debug.Log(timer);
             if (GameManager.Instance.rps != 0 && GameManager.Instance.rps2 != 0)
             {
-                break;
+                //break; //stop when both players move
             }
 
 
@@ -42,7 +43,10 @@ public class TimerLogic : MonoBehaviour
         }
 
         //timer = 0;
+        GameManager.Instance.challengeFlag = true;
         GameManager.Instance.winCheck = true;
+        //GameManager.Instance.rps = 0;
+        //GameManager.Instance.rps2 = 0;
 
     }
   }
