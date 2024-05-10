@@ -8,8 +8,8 @@ public class RPS_Logic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.rps = 3;
-        GameManager.Instance.rps2 = 3;
+        GameManager.Instance.rps = 0;
+        GameManager.Instance.rps2 = 0;
 
         //winner 0 means tie, 1 means player 1, and 2 means player 2
         GameManager.Instance.winner = 0;
