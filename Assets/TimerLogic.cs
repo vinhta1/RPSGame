@@ -9,7 +9,7 @@ public class TimerLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.challengeCheck = false;
+        GameManager.Instance.challengeCheck = true;
     }
 
     // Update is called once per frame
@@ -19,16 +19,20 @@ public class TimerLogic : MonoBehaviour
         if (GameManager.Instance.challengeCheck == true)
         {
             //timer = 20;
-            TakeoutCoroutine(1);
+            Debug.Log("got here");
+            StartCoroutine(TakeoutCoroutine(1));
         }
         //if()
 
     }
     IEnumerator TakeoutCoroutine(float time)
     {
+        Debug.Log(timer);
         GameManager.Instance.challengeCheck = false;
+        Debug.Log(timer);
         for (timer = 20; timer > 0; timer--)
         {
+            Debug.Log(timer);
             if (GameManager.Instance.rps != 0 && GameManager.Instance.rps2 != 0)
             {
                 break;
