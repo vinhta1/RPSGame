@@ -21,11 +21,11 @@ public class GameManager : MonoBehaviour
     {
         _instance = this;
     }
-    public GameObject player1;
+    public GameObject player1; //empty containers for Joycon Demo
     public GameObject player2;
-    public JoyconDemo p1Joycon;
+    public JoyconDemo p1Joycon; //joyconDemo class for player 1
     public JoyconDemo p2Joycon;
-    private List<Joycon> joycons;
+    private List<Joycon> joycons; //list of connected joycons
 
     public int rps;
     public int rps2;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     {
         p1Joycon = player1.GetComponent<JoyconDemo>();
         p2Joycon = player2.GetComponent<JoyconDemo>();
-        joycons = JoyconManager.Instance._connectedJoycons;
+        joycons = JoyconManager.Instance._connectedJoycons; //initialize list
     }
 
     private void Update()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimerLogic : MonoBehaviour
 {
-    public int timer = 3;
+    public int timerInit = 3;
     //bool challenger = false;
     // Start is called before the first frame update
     void Start()
@@ -27,8 +27,9 @@ public class TimerLogic : MonoBehaviour
     IEnumerator TakeoutCoroutine(float time)
     {
         GameManager.Instance.challengeCheck = false;
-        for (timer = 3; timer > 0; timer--)
+        for (int timer = timerInit; timer > 0; timer--)
         {
+
             Debug.Log(timer);
             if (GameManager.Instance.rps != 0 && GameManager.Instance.rps2 != 0)
             {

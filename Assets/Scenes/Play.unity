@@ -390,12 +390,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 1761306187}
   player2: {fileID: 409721581}
-  p1Joycon: {x: 0, y: 0, z: 0}
-  p2Joycon: {x: 0, y: 0, z: 0}
+  p1Joycon: {fileID: 0}
+  p2Joycon: {fileID: 0}
   rps: 0
-  rps2: 2
+  rps2: 0
   winner: 0
   challengeCheck: 0
+  challengeFlag: 1
   winCheck: 0
 --- !u!4 &2142155487
 Transform:
