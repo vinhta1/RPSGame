@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class RPS_Logic : MonoBehaviour
 {
+
     //Takes global variable that is set to rock, paper, or scissors based on input.
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,33 @@ public class RPS_Logic : MonoBehaviour
     {
         if (GameManager.Instance.winCheck)
         {
+            switch (GameManager.Instance.rps)
+            {
+                case 1:
+                    GameManager.Instance.rpsSprite.sprite = GameManager.Instance.rpsSprites[1];
+                    break;
+                case 2:
+                    GameManager.Instance.rpsSprite.sprite = GameManager.Instance.rpsSprites[2];
+                    break;
+                case 3:
+                    GameManager.Instance.rpsSprite.sprite = GameManager.Instance.rpsSprites[3];
+                    break;
+                default: break;
+            }
+            switch (GameManager.Instance.rps2)
+            {
+                case 1:
+                    GameManager.Instance.rps2Sprite.sprite = GameManager.Instance.rpsSprites[1];
+                    break;
+                case 2:
+                    GameManager.Instance.rps2Sprite.sprite = GameManager.Instance.rpsSprites[2];
+                    break;
+                case 3:
+                    GameManager.Instance.rps2Sprite.sprite = GameManager.Instance.rpsSprites[3];
+                    break;
+                default:
+                    break;
+            }
             if (GameManager.Instance.rps != GameManager.Instance.rps2)
             {
                 //0 is nothing
@@ -49,7 +78,7 @@ public class RPS_Logic : MonoBehaviour
     static public int wining(int player1, int player2)
     {
         // 0 = nothing, 1 = rock, 2 = paper, 3 = scissors
-        if(player1 == 0 && player2 != 0) 
+        if (player1 == 0 && player2 != 0) 
         {
             return 2;
         }
@@ -61,7 +90,7 @@ public class RPS_Logic : MonoBehaviour
         {
             if(player1 == 1)
             {
-                if(player2 == 2)
+                if (player2 == 2)
                 {
                     return 2;
                 }

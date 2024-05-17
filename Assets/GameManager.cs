@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public JoyconDemo p1Joycon; //joyconDemo class for player 1
     public JoyconDemo p2Joycon;
     private List<Joycon> joycons; //list of connected joycons
+    public SpriteRenderer rpsSprite;
+    public SpriteRenderer rps2Sprite;
+    public Sprite[] rpsSprites;
 
     public int rps;
     public int rps2;
@@ -39,6 +42,10 @@ public class GameManager : MonoBehaviour
         p1Joycon = player1.GetComponent<JoyconDemo>();
         p2Joycon = player2.GetComponent<JoyconDemo>();
         joycons = JoyconManager.Instance._connectedJoycons; //initialize list
+        player1.GetComponent<SpriteRenderer>().sprite = rpsSprites[0];
+        player2.GetComponent<SpriteRenderer>().sprite = rpsSprites[0];
+        rpsSprite = player1.GetComponent<SpriteRenderer>();
+        rps2Sprite = player2.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
