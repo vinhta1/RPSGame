@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using JoyconUnity;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     public SpriteRenderer rpsSprite;
     public SpriteRenderer rps2Sprite;
     public Sprite[] rpsSprites;
+    public TextMeshProUGUI result;
 
     public int rps;
     public int rps2;
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
         player2.GetComponent<SpriteRenderer>().sprite = rpsSprites[0];
         rpsSprite = player1.GetComponent<SpriteRenderer>();
         rps2Sprite = player2.GetComponent<SpriteRenderer>();
+        result = GameObject.Find("Result").GetComponent<TextMeshProUGUI>();
     }
 
     private void Update()

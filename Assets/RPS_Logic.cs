@@ -61,14 +61,17 @@ public class RPS_Logic : MonoBehaviour
             }
             if(GameManager.Instance.winner == 0)
             {
+                GameManager.Instance.result.SetText("Tie");
                 Debug.Log("Tie");
             }
             else if(GameManager.Instance.winner == 1)
             {
+                GameManager.Instance.result.SetText("Player 1 Wins");
                 Debug.Log("Player 1 wins");
             }
             else if(GameManager.Instance.winner == 2)
             {
+                GameManager.Instance.result.SetText("Player 2 Wins");
                 Debug.Log("Player 2 wins");
             }
             GameManager.Instance.winCheck = false;
