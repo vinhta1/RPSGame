@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ * Huge thanks to Looking Glasss and vksokolov for all the work done to create the JoyCon libraries and implementation.
+ * Most code was taken from their repositories and merged/edited to work with our code.
+ * https://github.com/Looking-Glass/JoyconLib
+ * https://github.com/vksokolov/JoyConUnity
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using JoyconUnity;

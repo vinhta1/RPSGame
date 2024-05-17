@@ -1,3 +1,10 @@
+/*
+ * Huge thanks to Looking Glasss and vksokolov for all the work done to create the JoyCon libraries and implementation.
+ * Most code was taken from their repositories and merged/edited to work with our code.
+ * https://github.com/Looking-Glass/JoyconLib
+ * https://github.com/vksokolov/JoyConUnity
+*/
+
 #define DEBUG
 
 using System.Collections;
