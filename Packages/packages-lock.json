@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.lookingglass.joyconlib": {
+      "version": "file:JoyconLib-master/Packages/com.lookingglass.joyconlib",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "10.1.1",
       "depth": 1,
